@@ -19,12 +19,6 @@ body {
 }
 
 /* 
---------------------------------------------------------------------------------
-SERP
---------------------------------------------------------------------------------
-*/
-
-/* 
 @ desktop-2L
 Offset: 240px
 Mainline: 654px / margin 16 / gutter 16
@@ -54,7 +48,13 @@ Stack mainline and sideline
 
 */
 
-.container {
+/* 
+--------------------------------------------------------------------------------
+SERP
+--------------------------------------------------------------------------------
+*/
+
+.serp-container {
   margin: 0px auto;
   color: var(--clr-white);
 
@@ -80,12 +80,12 @@ Stack mainline and sideline
   }
 }
 
-.sub-container {
+.serp-sub-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--sp-base);
 }
-.container,
+
 .skeleton,
 #mainline,
 #sideline,
@@ -101,10 +101,70 @@ Stack mainline and sideline
   padding: 0 var(--sp-base);
 }
 
-.container,
+.serp-container,
 .skeleton--black {
   background-color: var(--bg-tr-black);
 }
+
+/* 
+--------------------------------------------------------------------------------
+INDEX CURRENT
+--------------------------------------------------------------------------------
+*/
+.index-wrapper {
+  background-color: beige;
+  padding: var(--sp-40) 0;
+
+  &:nth-of-type(even) {
+    background-color: var(--bg-tr-black);
+  }
+  &:nth-of-type(odd) {
+    background-color: var(--bg-tr-blackest);
+  }
+}
+
+.index-cur-container,
+.index-new-container {
+  & h5 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+  }
+}
+
+.index-cur-container {
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Properties */
+  max-width: 280px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: var(--bg-tr-white);
+
+  /* padding: var(--sp-base); */
+}
+.index-sub-container {
+  /* Grid */
+  display: grid;
+  gap: var(--sp-24);
+  grid-template-columns: 1fr;
+
+  /* Properties */
+
+  & > * {
+    padding: var(--sp-12);
+    background-color: var(--bg-tr-white);
+  }
+}
+
+/* 
+--------------------------------------------------------------------------------
+BLOCKS
+--------------------------------------------------------------------------------
+*/
 
 .block-result,
 .block-card {
@@ -130,7 +190,11 @@ Stack mainline and sideline
   margin-bottom: var(--sp-base);
 }
 
-/* GRID */
+/* 
+--------------------------------------------------------------------------------
+GRID
+--------------------------------------------------------------------------------
+*/
 
 .grid {
   display: grid;
@@ -138,12 +202,17 @@ Stack mainline and sideline
   padding: var(--sp-base); /* Margin */
   background-color: var(--bg-tr-white);
 }
-
 .grid-8 {
   grid-template-columns: repeat(8, 1fr);
 }
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 .column {
   color: var(--clr-black);
@@ -163,36 +232,53 @@ BREAKPOINTS
 /* MOBILE */
 @media (min-width: 550px) {
   /* ... */
-  .container {
+  .serp-container {
     /*  */
+  }
+  .index-cur-container {
+    max-width: 400px;
   }
 }
 /* TABLET */
 @media (min-width: 768px) {
   /* ... */
-  .container {
+  .serp-container {
     /*  */
+  }
+  .index-cur-container {
+    max-width: 460px;
   }
 }
 /* DESKTOP */
 @media (min-width: 1080px) {
   /* ... */
-  .container {
+  .serp-container {
     margin: auto;
     width: fit-content;
   }
-  .sub-container {
+  .serp-sub-container {
     grid-template-columns: 654px 360px;
     gap: 40px;
   }
   #sideline {
     padding: 0;
   }
+  /*  */
+  .index-cur-container {
+    max-width: 992px;
+  }
+  /*  */
+  .col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /* DESKTOP L */
 @media (min-width: 1280px) {
   /* ... */
-  .container {
+  .serp-container {
     margin-left: 120px;
   }
 }
@@ -200,14 +286,14 @@ BREAKPOINTS
 @media (min-width: 1440px) {
   /* ... */
 
-  .container {
+  .serp-container {
     margin-left: 180px;
   }
 }
 /* DESKTOP 2L */
 @media (min-width: 1920px) {
   /* ... */
-  .container {
+  .serp-container {
     margin-left: 240px;
   }
 }

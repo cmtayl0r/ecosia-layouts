@@ -57,7 +57,8 @@ https://www.fluid-type-scale.com/
   /* Surfaces - Transparent */
   --bg-tr-white: rgba(255, 255, 255, 0.3);
   --bg-tr-whitest: rgba(255, 255, 255, 0.5);
-  --bg-tr-black: rgba(0, 0, 0, 0.6);
+  --bg-tr-black: rgba(0, 0, 0, 0.3);
+  --bg-tr-blackest: rgba(0, 0, 0, 0.5);
   --bg-tr-rose: rgb(233, 64, 87, 0.3);
 
   /* Border radius */

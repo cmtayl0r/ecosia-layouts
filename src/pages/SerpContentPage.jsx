@@ -6,14 +6,14 @@ import Card from "../components/Card";
 
 function SerpContentPage({ breakpoint }) {
   return (
-    <div className="container">
+    <div className="serp-container">
       <header className="title-block">
         <h5>Container</h5>
         <small className="small">
           Breakpoint: <span>{breakpoint}</span>
         </small>
       </header>
-      <div className="sub-container">
+      <div className="serp-sub-container">
         <main id="mainline">
           <header className="title-block">
             <p>Mainline</p>
