@@ -17,9 +17,7 @@ function SerpGridPage({ breakpoint }) {
         <main id="mainline">
           <header className="title-block">
             <p>Mainline</p>
-            <small>
-              Blocks use up to 8 Columns<br></br>16px gap / 16px padding
-            </small>
+            <small>16px gap / 16px padding</small>
           </header>
 
           <div class="grid grid-8">
@@ -36,9 +34,7 @@ function SerpGridPage({ breakpoint }) {
         <aside id="sideline">
           <header className="title-block">
             <p>Sideline</p>
-            <small>
-              Blocks use up to 8 Columns<br></br>16px gap / 16px padding
-            </small>
+            <small>16px gap / 16px padding</small>
           </header>
           <div class="grid grid-4">
             <div class="column">1</div>

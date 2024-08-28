@@ -170,6 +170,8 @@ BLOCKS
 .block-card {
   padding: var(--sp-12);
   background-color: var(--bg-tr-white);
+  margin-bottom: var(--sp-base);
+  color: var(--clr-black);
 
   & > :first-child {
     text-transform: uppercase;
@@ -179,15 +181,11 @@ BLOCKS
 }
 
 .block-result {
-  /* border-top: 1px solid var(--clr-gray); */
-  margin-bottom: var(--sp-8);
-  color: var(--clr-black);
+  /* --- */
 }
 
 .block-card {
-  color: var(--clr-black);
   border-radius: var(--br-lg);
-  margin-bottom: var(--sp-base);
 }
 
 /* 
