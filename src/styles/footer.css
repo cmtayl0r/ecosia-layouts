@@ -18,7 +18,7 @@ footer {
   padding: var(--sp-base);
 
   width: 100%;
-  background-color: var(--bg-tr-white);
+  background-color: var(--bg-tr-black);
 }
 
 #footer-row-2 {
@@ -29,7 +29,7 @@ footer {
   gap: var(--sp-8);
 
   width: 100%;
-  background-color: var(--bg-tr-black);
+  background-color: var(--bg-tr-blackest);
   padding: var(--sp-base) var(--sp-24);
 }
 

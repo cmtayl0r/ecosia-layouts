@@ -16,7 +16,7 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         setCurrentPage("Index");
         break;
       case "/serp-grid":
-        setCurrentPage("SERP 2");
+        setCurrentPage("SERP [Grid]");
         break;
       // Add more cases for other routes as needed
       default:
@@ -41,19 +41,27 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
   return (
     <div className="toast">
       <h6>{currentPage}</h6>
-      <p>
-        Viewport Width: <span>{viewportWidth}px</span>
-      </p>
-      <p>
-        Breakpoint: <span>{breakpoint}</span>
-      </p>
-      <div id="toast-buttons">
+      <div>
+        <p>
+          Viewport Width: <span>{viewportWidth}px</span>
+        </p>
+        <p>
+          Breakpoint: <span>{breakpoint}</span>
+        </p>
+      </div>
+      <hr />
+      <p>Proposed SERP</p>
+      <div className="toast-buttons">
         <button className="btn" onClick={goToSerpContentPage}>
           SERP
         </button>
         <button className="btn" onClick={goToSerpGridPage}>
-          SERP 2
+          SERP [Grid]
         </button>
+      </div>
+      <hr />
+      <p>Current Index</p>
+      <div className="toast-buttons">
         <button className="btn" onClick={goToIndexContentPage}>
           Index
         </button>

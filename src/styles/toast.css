@@ -11,8 +11,12 @@ TOAST FOR VIEWPORT WIDTH
   z-index: 1000;
   padding: 1rem;
   border-radius: var(--br-md);
-  background-color: var(--bg-tr-whitest);
+  background-color: white;
   color: var(--clr-black);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
 
   & span {
     font-weight: var(--fw-bold);
@@ -28,9 +32,8 @@ TOAST FOR VIEWPORT WIDTH
     margin: 0;
   }
 }
-#toast-buttons {
+.toast-buttons {
   display: flex;
   gap: var(--sp-8);
-  justify-content: flex-end;
-  margin-top: var(--sp-8);
+  justify-content: flex-start;
 }

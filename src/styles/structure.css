@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
 
   /* Default background gradient if none defined */
-  background-image: var(--gr-fizz);
+  background-image: var(--gr-expresso);
 }
 
 /* 
