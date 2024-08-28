@@ -1,0 +1,36 @@
+/* 
+--------------------------------------------------------------------------------
+TOAST FOR VIEWPORT WIDTH
+--------------------------------------------------------------------------------
+*/
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  padding: 1rem;
+  border-radius: var(--br-md);
+  background-color: var(--bg-tr-whitest);
+  color: var(--clr-black);
+
+  & span {
+    font-weight: var(--fw-bold);
+  }
+
+  p {
+    font-size: var(--fs-sm);
+  }
+
+  & h6 {
+    font-weight: var(--fw-black);
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+#toast-buttons {
+  display: flex;
+  gap: var(--sp-8);
+  justify-content: flex-end;
+  margin-top: var(--sp-8);
+}

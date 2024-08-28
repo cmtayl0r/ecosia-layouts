@@ -1,0 +1,157 @@
+/* 
+--------------------------------------------------------------------------------
+HEADER
+--------------------------------------------------------------------------------
+*/
+#header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-base) var(--sp-base) 0 var(--sp-base);
+}
+
+#header-row-1 {
+  display: grid;
+  grid-template-areas:
+    "spacer-1 logo buttons" /* Top row */
+    "spacer-2 spacer-2 spacer-2" /* Middle row */
+    "search search search"; /* Bottom row */
+  grid-template-columns: 1fr 1fr 1fr; /* Two equal-width columns */
+  grid-template-rows: auto auto auto; /* Two rows */
+  align-items: center; /* Center items in their rows */
+}
+#header-row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#h-logo {
+  /* Position */
+  grid-area: logo;
+  justify-self: center;
+  margin-right: 0;
+
+  /* Style */
+  height: 20px;
+  width: 70px;
+  border-radius: var(--br-sm);
+}
+
+#h-search {
+  /* Position */
+  grid-area: search; /* Place in the search area */
+  max-width: none;
+  /* Style */
+  height: 40px;
+  width: 100%; /* Fluid width */
+  border-radius: var(--br-lg);
+}
+
+.h-button {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--br-lg);
+}
+#h-spacer-1 {
+  grid-area: spacer-1;
+  width: 100%;
+  height: var(--sp-8);
+}
+#h-spacer-2 {
+  grid-area: spacer-2;
+  width: 100%;
+  height: var(--sp-8);
+}
+
+#h-buttons {
+  /* Position */
+  grid-area: buttons; /* Place in the buttons area */
+  justify-content: end;
+
+  /* Style */
+  display: flex; /* Align buttons in a row */
+  gap: 10px; /* Space between buttons */
+}
+
+#h-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sp-8);
+  height: 40px;
+  padding: 0;
+
+  margin-top: var(--sp-8);
+  list-style: none;
+}
+
+.h-tab {
+  width: 70px;
+  border-radius: var(--br-sm) var(--br-sm) 0 0;
+}
+
+/* 
+--------------------------------------------------------------------------------
+BREAKPOINTS
+--------------------------------------------------------------------------------
+*/
+
+/* MOBILE */
+@media (min-width: 550px) {
+  /* ... */
+}
+/* TABLET */
+@media (min-width: 768px) {
+  /* ... */
+}
+/* DESKTOP */
+@media (min-width: 1080px) {
+  /* ... */
+  #header {
+    padding: var(--sp-24) var(--sp-24) 0 var(--sp-24);
+  }
+
+  #header-row-1 {
+    display: grid;
+    grid-template-areas: "logo search spacer-2 buttons";
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: auto; /* Single row */
+    align-items: center; /* Center content vertically */
+  }
+  #h-logo {
+    margin-right: var(--sp-20);
+  }
+  #h-spacer-2 {
+    display: none;
+  }
+  #h-search {
+    max-width: 660px; /* Limit max-width */
+    width: 100%; /* Full width */
+  }
+  #h-tabs {
+    margin-left: 90px;
+  }
+}
+/* DESKTOP L */
+@media (min-width: 1280px) {
+  /* ... */
+}
+/* DESKTOP 1L */
+@media (min-width: 1440px) {
+  /* ... */
+  #h-logo {
+    margin-right: 80px;
+  }
+  #h-tabs {
+    margin-left: 150px;
+  }
+}
+/* DESKTOP 2L */
+@media (min-width: 1920px) {
+  /* ... */
+  #h-logo {
+    margin-right: 140px;
+  }
+  #h-tabs {
+    margin-left: 210px;
+  }
+}

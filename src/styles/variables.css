@@ -1,0 +1,104 @@
+:root {
+  /* Font faces */
+  --ff-plain: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Font weights */
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-semiBold: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
+
+  /* Line Height */
+  /* 
+Add accessible line-height for paragraph content
+https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html 
+*/
+  /* FIXME: Dynamic line heights for typography */
+  --lh-base: 1.6;
+  --lh-tight: calc(0.7 * var(--lh-base));
+
+  /* 
+Fluid typography system
+https://www.fluid-type-scale.com/
+- Line height (line spacing) to at least 1.5 times the font size;
+- Spacing following paragraphs to at least 2 times the font size;
+*/
+  --fs-sm: clamp(0.75rem, 0.31vw + 0.69rem, 0.94rem);
+  --fs-base: clamp(1rem, 0.42vw + 0.92rem, 1.25rem);
+  --fs-md: clamp(1.33rem, 0.56vw + 1.22rem, 1.67rem);
+  --fs-lg: clamp(1.78rem, 0.74vw + 1.63rem, 2.22rem);
+  --fs-xl: clamp(2.37rem, 0.99vw + 2.17rem, 2.96rem);
+  --fs-xxl: clamp(3.16rem, 1.32vw + 2.89rem, 3.95rem);
+  --fs-xxxl: clamp(4.21rem, 1.75vw + 3.86rem, 5.26rem);
+
+  /* Colours */
+  --clr-white: #f3f3f3;
+  --clr-black: #0a0a23;
+  --clr-gray-light: #c8c8c8;
+  --clr-gray: #8e8e8e;
+  --clr-gray-dark: #444;
+  --clr-yellow: #ffc608;
+
+  /* Gradients */
+  --gr-yoda: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  --gr-witch: linear-gradient(to right, #c31432, #240b36);
+  --gr-wiretap: linear-gradient(to right, #8a2387, rgb(233, 64, 87), #f27121);
+  --gr-expresso: linear-gradient(to right, #ad5389, #3c1053);
+  --gr-fizz: linear-gradient(to right, #00f260, #0575e6);
+  --gr-velvetsun: linear-gradient(to right, #e1eec3, #f05053);
+  --gr-grandeur: linear-gradient(to right, #000046, #1cb5e0);
+  --gr-martini: linear-gradient(to right, #fdfc47, #24fe41);
+  --gr-combi: linear-gradient(to right, #00416a, #799f0c, #ffe000);
+  --gr-mushy: linear-gradient(to right, #28b487, #7dd56f);
+
+  /* Surfaces - Transparent */
+  --bg-tr-white: rgba(255, 255, 255, 0.3);
+  --bg-tr-whitest: rgba(255, 255, 255, 0.5);
+  --bg-tr-black: rgba(0, 0, 0, 0.6);
+  --bg-tr-rose: rgb(233, 64, 87, 0.3);
+
+  /* Border radius */
+  --br-sm: 0.4rem;
+  --br-md: 0.8rem;
+  --br-lg: 1.2rem;
+  --br-xl: 2rem;
+  --br-xxl: 3rem;
+  --br-circle: 50%;
+
+  /* Static Spacing system */
+  --sp-4: calc(var(--sp-base) * 0.25); /* 4px */
+  --sp-8: calc(var(--sp-base) * 0.5); /* 8px */
+  --sp-12: calc(var(--sp-base) * 0.75); /* 12px */
+  --sp-base: 1rem; /* 16px */
+  --sp-20: calc(var(--sp-base) * 1.25); /* 20px */
+  --sp-24: calc(var(--sp-base) * 1.5); /* 24px */
+  --sp-32: calc(var(--sp-base) * 2); /* 32px */
+  --sp-40: calc(var(--sp-base) * 2.5); /* 40px */
+  --sp-48: calc(var(--sp-base) * 3); /* 48px */
+  --sp-56: calc(var(--sp-base) * 3.5); /* 56px */
+  --sp-64: calc(var(--sp-base) * 4); /* 64px */
+  --sp-72: calc(var(--sp-base) * 4.5); /* 72px */
+  --sp-80: calc(var(--sp-base) * 5); /* 80px */
+
+  /* Dark light mode */
+  /*
+    --clr-text: hsl(204, 100%, 1%);
+    --clr-surface: hsl(0, 0%, 100%);
+    --clr-primary: hsl(329, 85%, 53%);
+    --clr-secondary: hsl(208, 83%, 93%);
+    --clr-accent: hsl(89, 85%, 33%);
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --clr-text: hsl(0, 0%, 100%);
+        --clr-surface: hsl(204, 100%, 1%);
+        --clr-primary: hsl(329, 85%, 53%);
+        --clr-secondary: hsl(208, 83%, 17%);
+        --clr-accent: hsl(89, 85%, 33%);
+      }
+    }
+
+  */
+}

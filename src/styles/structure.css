@@ -1,0 +1,213 @@
+/* 
+--------------------------------------------------------------------------------
+FOUNDATIONS
+--------------------------------------------------------------------------------
+*/
+
+body {
+  font-family: var(--ff-plain);
+  color: var(--clr-black);
+  /* 
+    To sort horizontal scroll bar issue 
+    when using full-with trick on image and callout
+    vw unit counts under the vertical scrollbar
+    */
+  overflow-x: hidden;
+
+  /* Default background gradient if none defined */
+  background-image: var(--gr-fizz);
+}
+
+/* 
+--------------------------------------------------------------------------------
+SERP
+--------------------------------------------------------------------------------
+*/
+
+/* 
+@ desktop-2L
+Offset: 240px
+Mainline: 654px / margin 16 / gutter 16
+Sideline: 360px / margin 16 / gutter 16
+
+@ desktop-1L
+Offset: 180px
+Mainline: 654px / margin 16 / gutter 16
+Sideline: 360px / margin 16 / gutter 16
+
+@ desktop-L
+Offset: 120px
+Mainline: 654px / margin 16 / gutter 16
+Sideline: 360px / margin 16 / gutter 16
+
+@ desktop
+Offset: 0px
+Mainline: 654px / margin 16 / gutter 16
+Sideline: 360px / margin 16 / gutter 16
+
+@ tablet
+Stack mainline and sideline
+4 Columns / margin 16 / gutter 16
+
+@ mobile
+4 Columns / margin 16 / gutter 16
+
+*/
+
+.container {
+  margin: 0px auto;
+  color: var(--clr-white);
+
+  & h5 {
+    margin: 0 0 var(--sp-base) 0;
+
+    & span {
+      font-weight: var(--fw-light);
+    }
+  }
+}
+.title-block {
+  padding: var(--sp-12);
+
+  & > :first-child {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+  }
+
+  & span {
+    font-weight: var(--fw-bold);
+  }
+}
+
+.sub-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-base);
+}
+.container,
+.skeleton,
+#mainline,
+#sideline,
+#header {
+  background-color: var(--bg-tr-white);
+}
+
+#mainline > :last-child {
+  margin-bottom: 0;
+}
+
+#sideline {
+  padding: 0 var(--sp-base);
+}
+
+.container,
+.skeleton--black {
+  background-color: var(--bg-tr-black);
+}
+
+.block-result,
+.block-card {
+  padding: var(--sp-12);
+  background-color: var(--bg-tr-white);
+
+  & > :first-child {
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+    font-size: var(--fs-sm);
+  }
+}
+
+.block-result {
+  /* border-top: 1px solid var(--clr-gray); */
+  margin-bottom: var(--sp-8);
+  color: var(--clr-black);
+}
+
+.block-card {
+  color: var(--clr-black);
+  border-radius: var(--br-lg);
+  margin-bottom: var(--sp-base);
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  gap: var(--sp-base); /* Gutter space */
+  padding: var(--sp-base); /* Margin */
+  background-color: var(--bg-tr-white);
+}
+
+.grid-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.column {
+  color: var(--clr-black);
+  background-color: var(--bg-tr-whitest);
+  padding-top: var(--sp-8);
+  text-align: center; /* Visual indicator of column borders */
+  border-radius: var(--br-sm);
+  height: 500px;
+}
+
+/* 
+--------------------------------------------------------------------------------
+BREAKPOINTS
+--------------------------------------------------------------------------------
+*/
+
+/* MOBILE */
+@media (min-width: 550px) {
+  /* ... */
+  .container {
+    /*  */
+  }
+}
+/* TABLET */
+@media (min-width: 768px) {
+  /* ... */
+  .container {
+    /*  */
+  }
+}
+/* DESKTOP */
+@media (min-width: 1080px) {
+  /* ... */
+  .container {
+    margin: auto;
+    width: fit-content;
+  }
+  .sub-container {
+    grid-template-columns: 654px 360px;
+    gap: 40px;
+  }
+  #sideline {
+    padding: 0;
+  }
+}
+/* DESKTOP L */
+@media (min-width: 1280px) {
+  /* ... */
+  .container {
+    margin-left: 120px;
+  }
+}
+/* DESKTOP 1L */
+@media (min-width: 1440px) {
+  /* ... */
+
+  .container {
+    margin-left: 180px;
+  }
+}
+/* DESKTOP 2L */
+@media (min-width: 1920px) {
+  /* ... */
+  .container {
+    margin-left: 240px;
+  }
+}

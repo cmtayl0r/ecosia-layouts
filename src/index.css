@@ -1,0 +1,11 @@
+@import url("styles/reset.css");
+@import url("styles/variables.css");
+@import url("styles/structure.css");
+@import url("styles/typography.css");
+@import url("styles/utilities.css");
+
+/* Components */
+@import url("styles/header.css");
+@import url("styles/footer.css");
+@import url("styles/buttons.css");
+@import url("styles/toast.css");

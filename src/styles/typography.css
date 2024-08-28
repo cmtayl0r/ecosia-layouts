@@ -1,0 +1,114 @@
+/* 
+--------------------------------------------------------------------------------
+SIZING
+--------------------------------------------------------------------------------
+*/
+small,
+.text-small {
+  font-size: var(--fs-sm);
+}
+p {
+  font-size: var(--fs-base);
+}
+h5 {
+  font-size: var(--fs-md);
+  /* line-height: var(--lh-md); */
+}
+h4 {
+  font-size: var(--fs-lg);
+  /* line-height: var(--lh-lg); */
+}
+h3 {
+  font-size: var(--fs-xl);
+  /* line-height: var(--lh-xl); */
+}
+h2 {
+  font-size: var(--fs-xxl);
+  /* line-height: var(--lh-xxl); */
+}
+h1 {
+  font-size: var(--fs-xxxl);
+  /* line-height: var(--lh-xxxl); */
+}
+h6 {
+  font-size: var(--fs-base);
+  /* line-height: var(--lh-sm); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-special);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  margin: 3rem 0 1.38rem;
+}
+
+/* 
+--------------------------------------------------------------------------------
+WEIGHTS
+--------------------------------------------------------------------------------
+*/
+
+p {
+  font-weight: var(--fw-regular);
+}
+
+.text-light {
+  font-weight: var(--fw-light);
+}
+
+/* 
+--------------------------------------------------------------------------------
+LINKS
+--------------------------------------------------------------------------------
+*/
+
+a {
+  color: var(--clr-black);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 
+--------------------------------------------------------------------------------
+LISTS
+--------------------------------------------------------------------------------
+*/
+
+ul {
+  list-style-position: inside;
+  padding-left: var(--sp-base);
+}
+ul li::marker,
+ol li::marker {
+  color: var(--clr-gray);
+}
+
+/* 
+--------------------------------------------------------------------------------
+CODE
+--------------------------------------------------------------------------------
+*/
+
+code {
+  font-family: monospace;
+  font-size: inherit;
+}
+
+p > code,
+li > code,
+dd > code,
+td > code {
+  background: var(--bg-tr-white);
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.2em;
+}
