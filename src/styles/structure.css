@@ -112,7 +112,6 @@ INDEX CURRENT
 --------------------------------------------------------------------------------
 */
 .index-wrapper {
-  background-color: beige;
   padding: var(--sp-40) 0;
 
   &:nth-of-type(even) {
@@ -125,6 +124,9 @@ INDEX CURRENT
 
 .index-cur-container,
 .index-new-container {
+  /* Properties */
+  color: var(--clr-white);
+
   & h5 {
     margin: 0;
     text-transform: uppercase;
@@ -153,6 +155,7 @@ INDEX CURRENT
   grid-template-columns: 1fr;
 
   /* Properties */
+  color: var(--clr-black);
 
   & > * {
     padding: var(--sp-12);
