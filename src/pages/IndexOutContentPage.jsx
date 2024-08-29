@@ -4,7 +4,7 @@ import React from "react";
 import Header from "../components/Header";
 import Info from "../components/Info";
 
-function IndexContentPage({ breakpoint }) {
+function IndexOutContentPage({ breakpoint }) {
   const customStyles = {
     // header: { backgroundColor: "#782" },
   };
@@ -17,13 +17,12 @@ function IndexContentPage({ breakpoint }) {
       <Info breakpoint={breakpoint} />
       <Header
         showLogo={true}
-        showSearch={false}
+        showSearch={true}
         showButtons={true}
         showTabs={false}
         customStyles={customStyles}
         customClasses={customClasses}
       />
-
       {/* SECTION 1 */}
       <section className="index-wrapper">
         <div className="index-cur-container">
@@ -112,4 +111,4 @@ function IndexContentPage({ breakpoint }) {
   );
 }
 
-export default IndexContentPage;
+export default IndexOutContentPage;

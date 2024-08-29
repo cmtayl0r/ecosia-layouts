@@ -1,0 +1,12 @@
+#info {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-base);
+
+  & h5 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+  }
+}

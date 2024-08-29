@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../components/Header";
 import Result from "../components/Result";
 import Card from "../components/Card";
+import Info from "../components/Info";
 
 function SerpContentPage({ breakpoint }) {
   const customStyles = {
@@ -15,6 +16,7 @@ function SerpContentPage({ breakpoint }) {
 
   return (
     <>
+      <Info breakpoint={breakpoint} />
       <Header
         showLogo={true}
         showSearch={true}

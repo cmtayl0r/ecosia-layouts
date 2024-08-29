@@ -13,7 +13,10 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         setCurrentPage("SERP");
         break;
       case "/index-content":
-        setCurrentPage("Index");
+        setCurrentPage("Index 1");
+        break;
+      case "/index-out-content":
+        setCurrentPage("Index 2");
         break;
       case "/serp-grid":
         setCurrentPage("SERP [Grid]");
@@ -34,6 +37,9 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
   const goToIndexContentPage = () => {
     navigate("/index-content");
   };
+  const goToIndexOutContentPage = () => {
+    navigate("/index-out-content");
+  };
   // const goToIndexGridPage = () => {
   //   navigate("/index-grid");
   // };
@@ -50,7 +56,7 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         </p>
       </div>
       <hr />
-      <p>Proposed SERP</p>
+      <p>SERP</p>
       <div className="toast-buttons">
         <button className="btn" onClick={goToSerpContentPage}>
           SERP
@@ -60,10 +66,13 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         </button>
       </div>
       <hr />
-      <p>Current Index</p>
+      <p>Index</p>
       <div className="toast-buttons">
         <button className="btn" onClick={goToIndexContentPage}>
-          Index
+          Index 1
+        </button>
+        <button className="btn" onClick={goToIndexOutContentPage}>
+          Index 2
         </button>
       </div>
     </div>

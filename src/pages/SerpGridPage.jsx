@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import Header from "../components/Header";
+import Info from "../components/Info";
 
 function SerpGridPage({ breakpoint }) {
   const customStyles = {
@@ -13,6 +14,7 @@ function SerpGridPage({ breakpoint }) {
 
   return (
     <>
+      <Info breakpoint={breakpoint} />
       <Header
         showLogo={true}
         showSearch={true}

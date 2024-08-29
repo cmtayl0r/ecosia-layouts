@@ -3,6 +3,8 @@ const PATHS = {
   serpGrid: "/serp-grid",
   indexContent: "/index-content",
   indexGrid: "/index-grid",
+  indexOutContent: "/index-out-content",
+  indexOutGrid: "/index-out-grid",
   notFound: "*",
 };
 

@@ -60,6 +60,9 @@ p {
 .text-light {
   font-weight: var(--fw-light);
 }
+.text-bold {
+  font-weight: var(--fw-bold);
+}
 
 /* 
 --------------------------------------------------------------------------------
