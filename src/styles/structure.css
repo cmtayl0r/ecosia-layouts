@@ -111,14 +111,51 @@ INDEX CURRENT
 --------------------------------------------------------------------------------
 */
 .index-wrapper {
-  padding: var(--sp-40) 0;
-
   &:nth-of-type(even) {
     background-color: var(--bg-tr-black);
   }
   &:nth-of-type(odd) {
     background-color: var(--bg-tr-blackest);
   }
+}
+
+.wrapper--center {
+  padding: var(--sp-40) 0;
+}
+
+.wrapper--full {
+  display: grid;
+  grid-template-areas: "left";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  min-height: 640px;
+}
+
+.sub-container--left {
+  grid-area: left;
+  background-color: aqua;
+}
+
+.sub-container--right {
+  display: none;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-base);
+  max-width: 380px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+}
+
+.counter {
+  height: 103px;
+  width: 100%;
+  background-color: var(--bg-tr-whitest);
+  border-radius: var(--br-lg);
 }
 
 .index-cur-container,
@@ -267,6 +304,24 @@ BREAKPOINTS
   .index-cur-container {
     max-width: 992px;
   }
+
+  .wrapper--full {
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    min-height: 640px;
+  }
+  .sub-container--right {
+    display: flex;
+    grid-area: right;
+    background-color: wheat;
+  }
+
+  .hero-content {
+    max-width: 380px;
+  }
+
   /*  */
   .col-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -280,6 +335,9 @@ BREAKPOINTS
   /* ... */
   .serp-container {
     margin-left: 120px;
+  }
+  .hero-content {
+    max-width: 485px;
   }
 }
 /* DESKTOP 1L */

@@ -23,8 +23,24 @@ function IndexOutContentPage({ breakpoint }) {
         customStyles={customStyles}
         customClasses={customClasses}
       />
+
+      <section className="index-wrapper wrapper--full">
+        <div className="sub-container--left">
+          <div className="hero-content">
+            <h4>The greenest way to search</h4>
+            <small>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nisi
+              eos veniam maxime deserunt, veritatis officia tempore libero
+              molestias, adipisci fugit voluptate nulla corrupti tenetur esse
+              ratione eum sint quaerat.
+            </small>
+            <div className="counter"></div>
+          </div>
+        </div>
+        <div className="sub-container--right">Right</div>
+      </section>
       {/* SECTION 1 */}
-      <section className="index-wrapper">
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>
@@ -43,7 +59,7 @@ function IndexOutContentPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper">
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>
@@ -71,7 +87,7 @@ function IndexOutContentPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper">
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>
