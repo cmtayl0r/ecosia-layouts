@@ -26,9 +26,9 @@ function SerpGridPage({ breakpoint }) {
       <div className="serp-container">
         <header className="title-block">
           <h5>Container</h5>
-          <small className="small">
+          {/* <small className="small">
             Breakpoint: <span>{breakpoint}</span>
-          </small>
+          </small> */}
         </header>
         <div className="serp-sub-container">
           <main id="mainline">
