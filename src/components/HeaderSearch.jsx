@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Header() {
   return (
-    <header id="header">
+    <header id="header" className="header--search">
       <div id="header-row-1">
         <div id="h-logo" className="skeleton--black"></div>
         <div id="h-spacer-1"></div>

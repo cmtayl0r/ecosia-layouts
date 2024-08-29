@@ -1,7 +1,26 @@
 import React from "react";
+
+// Components
+import Header from "../components/Header";
+
 function IndexContentPage() {
+  const customStyles = {
+    // header: { backgroundColor: "#782" },
+  };
+  const customClasses = {
+    header: "header--search",
+  };
+
   return (
     <>
+      <Header
+        showLogo={true}
+        showSearch={true}
+        showButtons={true}
+        showTabs={false}
+        customStyles={customStyles}
+        customClasses={customClasses}
+      />
       {/* SECTION 1 */}
       <section className="index-wrapper">
         <div className="index-cur-container">

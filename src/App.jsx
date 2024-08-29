@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import AppRoutes from "./router/AppRoutes";
 
 // Components
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ViewportInfo from "./components/ViewportInfo";
 
@@ -43,7 +42,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <AppRoutes breakpoint={breakpoint} />
       <Footer />
       <ViewportInfo viewportWidth={viewportWidth} breakpoint={breakpoint} />

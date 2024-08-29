@@ -88,8 +88,7 @@ SERP
 
 .skeleton,
 #mainline,
-#sideline,
-#header {
+#sideline {
   background-color: var(--bg-tr-white);
 }
 

@@ -1,30 +1,44 @@
 import React, { useState, useEffect } from "react";
 
-function Header() {
+function Header({
+  showLogo = true,
+  showSearch = true,
+  showButtons = true,
+  showTabs = true,
+  customStyles = {},
+  customClasses = {},
+}) {
   return (
-    <header id="header">
-      <div id="header-row-1">
-        <div id="h-logo" className="skeleton--black"></div>
-        <div id="h-spacer-1"></div>
-        <div id="h-search" className="skeleton"></div>
-        <div id="h-spacer-2"></div>
-        <div id="h-buttons">
-          <div className="h-button skeleton"></div>
-          <div className="h-button skeleton"></div>
-          <div className="h-button skeleton"></div>
+    <header
+      id="header"
+      style={customStyles.header}
+      className={`${customClasses.header || ""}`}
+    >
+      <div id="header-row-1" className={`${customClasses.row || ""}`}>
+        {showLogo && <div id="h-logo" className="skeleton--black"></div>}
+        {showSearch && <div id="h-search" className="skeleton"></div>}
+        <div className="grid-spacer--width"></div>
+        {showButtons && (
+          <div id="h-buttons">
+            <div className="h-button skeleton"></div>
+            <div className="h-button skeleton"></div>
+            <div className="h-button skeleton"></div>
+          </div>
+        )}
+      </div>
+      {showTabs && (
+        <div id="header-row-2">
+          <ul id="h-tabs">
+            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton"></li>
+          </ul>
         </div>
-      </div>
-      <div id="header-row-2">
-        <ul id="h-tabs">
-          <li className="h-tab skeleton"></li>
-          <li className="h-tab skeleton"></li>
-          <li className="h-tab skeleton"></li>
-          <li className="h-tab skeleton"></li>
-          <li className="h-tab skeleton"></li>
-          <li className="h-tab skeleton"></li>
-          <li className="h-tab skeleton"></li>
-        </ul>
-      </div>
+      )}
     </header>
   );
 }
