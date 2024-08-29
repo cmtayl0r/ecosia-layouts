@@ -133,7 +133,8 @@ INDEX CURRENT
 
 .sub-container--left {
   grid-area: left;
-  background-color: aqua;
+  background-color: var(--bg-tr-white);
+  padding: 0 var(--sp-base);
 }
 
 .sub-container--right {
@@ -149,6 +150,15 @@ INDEX CURRENT
   align-items: center;
   margin: auto;
   height: 100%;
+  background-color: var(--bg-tr-whitest);
+
+  & h4 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+  }
+}
+.hero-image {
 }
 
 .counter {
@@ -315,7 +325,10 @@ BREAKPOINTS
   .sub-container--right {
     display: flex;
     grid-area: right;
-    background-color: wheat;
+    background-color: var(--bg-tr-black);
+  }
+  .sub-container--left {
+    padding: 0;
   }
 
   .hero-content {

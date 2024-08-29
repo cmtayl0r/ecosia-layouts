@@ -25,7 +25,7 @@ function IndexContentPage({ breakpoint }) {
       />
 
       {/* SECTION 1 */}
-      <section className="index-wrapper">
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>
@@ -44,7 +44,7 @@ function IndexContentPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper">
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>
@@ -72,7 +72,7 @@ function IndexContentPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper">
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>

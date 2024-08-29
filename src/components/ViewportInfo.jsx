@@ -75,6 +75,8 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
           Index 2
         </button>
       </div>
+      <hr />
+      <p>Generic [new i.e. Accounts]</p>
     </div>
   );
 }
