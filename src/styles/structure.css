@@ -56,6 +56,7 @@ SERP
 
 .serp-container {
   margin: 0px auto;
+  width: fit-content;
   color: var(--clr-white);
 
   & h5 {
@@ -82,7 +83,7 @@ SERP
 
 .serp-sub-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 654px);
   gap: var(--sp-base);
 }
 
@@ -223,8 +224,7 @@ INDEX CURRENT
 .ntp-logo {
   height: 48px;
   width: 192px;
-  border-radius: var(--br-lg);
-  background-color: var(--bg-tr-whitest);
+  background-image: url("/ecosia-logo--lg.png");
 }
 .ntp-search {
   height: 60px;

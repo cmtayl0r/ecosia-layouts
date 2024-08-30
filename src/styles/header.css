@@ -69,9 +69,8 @@ HEADER CONTENT
 
   /* Properties */
   height: 20px;
-  width: 70px;
-  border-radius: var(--br-sm);
-  background-color: var(--bg-tr-blackest);
+  width: 80px;
+  background-image: url("/ecosia-logo.png");
 }
 
 /*  Search input */
@@ -238,6 +237,10 @@ BREAKPOINTS
   /* #h-logo {
     margin-right: 86px;
   } */
+  #h-logo {
+    margin-right: 24px;
+    justify-self: end;
+  }
   #h-tabs {
     margin-left: 156px;
   }
@@ -257,10 +260,6 @@ BREAKPOINTS
 
   /* ---- CONTENT ---- */
 
-  #h-logo {
-    margin-right: 24px;
-    justify-self: end;
-  }
   #h-tabs {
     margin-left: 216px;
   }
