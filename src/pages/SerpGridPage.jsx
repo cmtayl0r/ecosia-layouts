@@ -11,7 +11,7 @@ function SerpGridPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--serp",
-    logo: "logo--serp",
+    logo: "header-logo--serp",
   };
 
   return (

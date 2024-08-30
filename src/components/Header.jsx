@@ -16,29 +16,31 @@ function Header({
     >
       <div id="header-row-1" className={`${customClasses.row || ""}`}>
         {showLogo && (
-          <div id="h-logo" className={`${customClasses.logo || ""}`}></div>
+          <div id="header-logo" className={`${customClasses.logo || ""}`}></div>
         )}
-        {showSearch && <div id="h-search" className="skeleton--white"></div>}
+        {showSearch && (
+          <div id="header-search" className="skeleton--white"></div>
+        )}
         <div className="grid-spacer--width"></div>
         {showButtons && (
-          <div id="h-buttons">
-            <div className="h-button--lg"></div>
-            <div className="h-button skeleton--white"></div>
-            <div className="h-button skeleton--white"></div>
-            <div className="h-button skeleton--white"></div>
+          <div id="header-buttons">
+            <div className="header-button--lg skeleton--black"></div>
+            <div className="header-button skeleton--white"></div>
+            <div className="header-button skeleton--white"></div>
+            <div className="header-button skeleton--white"></div>
           </div>
         )}
       </div>
       {showTabs && (
         <div id="header-row-2">
-          <ul id="h-tabs">
-            <li className="h-tab skeleton--white"></li>
-            <li className="h-tab skeleton--white"></li>
-            <li className="h-tab skeleton--white"></li>
-            <li className="h-tab skeleton--white"></li>
-            <li className="h-tab skeleton--white"></li>
-            <li className="h-tab skeleton--white"></li>
-            <li className="h-tab skeleton--white"></li>
+          <ul id="header-tabs">
+            <li className="header-tab skeleton--white"></li>
+            <li className="header-tab skeleton--white"></li>
+            <li className="header-tab skeleton--white"></li>
+            <li className="header-tab skeleton--white"></li>
+            <li className="header-tab skeleton--white"></li>
+            <li className="header-tab skeleton--white"></li>
+            <li className="header-tab skeleton--white"></li>
           </ul>
         </div>
       )}

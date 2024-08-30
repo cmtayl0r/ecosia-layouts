@@ -61,28 +61,28 @@ LOGO
 
 /* Logo */
 
-#h-logo {
+#header-logo {
   /* Position */
   grid-area: logo;
 }
-.logo--serp {
+.header-logo--serp {
   justify-self: center;
   margin-right: 0;
 }
-.logo--browser,
-.logo--default {
+.header-logo--browser,
+.header-logo--default {
   /* Position */
   justify-self: center;
   margin-right: 0;
 }
-.logo--browser {
+.header-logo--browser {
   background-image: url("/ecosia-logo--browser.png");
   /* Properties */
   height: 35px;
   width: 70px;
 }
-.logo--default,
-.logo--serp {
+.header-logo--default,
+.header-logo--serp {
   /* Properties */
   background-image: url("/ecosia-logo.png");
   height: 20px;
@@ -97,7 +97,7 @@ HEADER CONTENT
 
 /*  Search input */
 
-#h-search {
+#header-search {
   /* Position */
   grid-area: search;
   margin-top: var(--sp-base);
@@ -119,15 +119,15 @@ HEADER CONTENT
 
 /* Buttons */
 
-.h-button {
+.header-button {
   width: 40px;
   height: 40px;
   border-radius: var(--br-lg);
 }
-.h-button--lg {
+.header-button--lg {
   display: none;
 }
-#h-buttons {
+#header-buttons {
   /* Position */
   grid-area: buttons; /* Place in the buttons area */
   display: flex; /* Align buttons in a row */
@@ -138,7 +138,7 @@ HEADER CONTENT
 
 /* Tabs */
 
-#h-tabs {
+#header-tabs {
   /* Flex */
   display: flex;
   flex-direction: row;
@@ -150,7 +150,7 @@ HEADER CONTENT
   list-style: none;
 }
 
-.h-tab {
+.header-tab {
   width: 70px;
   border-radius: var(--br-sm) var(--br-sm) 0 0;
 }
@@ -206,26 +206,25 @@ BREAKPOINTS
 
   /* ---- CONTENT ---- */
 
-  .logo--serp {
+  .header-logo--serp {
     justify-self: start;
   }
-  .logo--browser,
-  .logo--default {
+  .header-logo--browser,
+  .header-logo--default {
     justify-self: start;
   }
-  .h-button--lg {
+  .header-button--lg {
     display: flex;
     width: 260px;
     height: 40px;
     border-radius: var(--br-lg);
-    background-color: var(--bg-tr-black);
   }
-  #h-search {
+  #header-search {
     margin-top: 0;
     max-width: 660px; /* Limit max-width */
     width: 100%; /* Full width */
   }
-  #h-tabs {
+  #header-tabs {
     /* margin-left: 96px; */
   }
 }
@@ -242,7 +241,7 @@ BREAKPOINTS
 
   /* ---- CONTENT ---- */
 
-  #h-tabs {
+  #header-tabs {
     /* margin-left: 96px; */
   }
 }
@@ -262,11 +261,11 @@ BREAKPOINTS
   /* #h-logo {
     margin-right: 86px;
   } */
-  .logo--serp {
+  .header-logo--serp {
     margin-right: 24px;
     justify-self: end;
   }
-  #h-tabs {
+  #header-tabs {
     margin-left: 156px;
   }
 }
@@ -285,7 +284,7 @@ BREAKPOINTS
 
   /* ---- CONTENT ---- */
 
-  #h-tabs {
+  #header-tabs {
     margin-left: 216px;
   }
 }

@@ -11,7 +11,7 @@ function BrowserInstallPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--search",
-    logo: "logo--browser",
+    logo: "header-logo--browser",
   };
 
   return (

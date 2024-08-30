@@ -11,7 +11,7 @@ function IndexOutContentPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--search",
-    logo: "logo--serp",
+    logo: "header-logo--serp",
   };
 
   return (

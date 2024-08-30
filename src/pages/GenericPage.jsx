@@ -11,7 +11,7 @@ function GenericPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--search",
-    logo: "logo--default",
+    logo: "header-logo--default",
   };
   return (
     <>
