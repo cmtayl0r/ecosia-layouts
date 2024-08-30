@@ -1,0 +1,106 @@
+/* 
+--------------------------------------------------------------------------------
+WIREFRAME UTILITIES
+--------------------------------------------------------------------------------
+*/
+.skeleton--white {
+  background-color: var(--bg-tr-white);
+}
+
+.skeleton--whitest {
+  background-color: var(--bg-tr-whitest);
+}
+
+.skeleton--black {
+  background-color: var(--bg-tr-black);
+}
+.skeleton--blackest {
+  background-color: var(--bg-tr-blackest);
+}
+
+.text--white {
+  color: var(--clr-white);
+}
+
+.text-black {
+  color: var(--clr-black);
+}
+
+.text--title {
+  text-transform: uppercase;
+  font-weight: var(--fw-black);
+  margin: 0;
+}
+
+/* 
+--------------------------------------------------------------------------------
+BLOCKS
+--------------------------------------------------------------------------------
+*/
+
+/* SERP Search results and cards */
+.block--result,
+.block--card {
+  padding: var(--sp-12);
+  background-color: var(--bg-tr-white);
+  margin-bottom: var(--sp-base);
+  color: var(--clr-black);
+
+  & > :first-child {
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+    font-size: var(--fs-sm);
+  }
+}
+
+.block--card {
+  border-radius: var(--br-lg);
+}
+
+/* Page titles */
+.block--title {
+  padding: var(--sp-12);
+
+  & > :first-child {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+  }
+
+  & span {
+    font-weight: var(--fw-bold);
+  }
+}
+
+/* 
+--------------------------------------------------------------------------------
+GRID
+--------------------------------------------------------------------------------
+*/
+
+.grid {
+  display: grid;
+  gap: var(--sp-base); /* Gutter space */
+  padding: var(--sp-base); /* Margin */
+  background-color: var(--bg-tr-white);
+}
+.grid-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.column {
+  color: var(--clr-black);
+  background-color: var(--bg-tr-whitest);
+  padding-top: var(--sp-8);
+  text-align: center; /* Visual indicator of column borders */
+  border-radius: var(--br-sm);
+  height: 500px;
+}

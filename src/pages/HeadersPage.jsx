@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Header from "../components/Header";
 import Info from "../components/Info";
+import BlockTitle from "../components/BlockTitle";
 
 function HeadersPage({ breakpoint }) {
   const customStyles = {

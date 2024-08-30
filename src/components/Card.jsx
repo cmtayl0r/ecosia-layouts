@@ -1,6 +1,6 @@
 function Card() {
   return (
-    <div className="block-card">
+    <div className="block--card">
       <p>Card</p>
       <small>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, eligendi

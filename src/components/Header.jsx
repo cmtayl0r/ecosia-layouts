@@ -18,27 +18,27 @@ function Header({
         {showLogo && (
           <div id="h-logo" className={`${customClasses.logo || ""}`}></div>
         )}
-        {showSearch && <div id="h-search" className="skeleton"></div>}
+        {showSearch && <div id="h-search" className="skeleton--white"></div>}
         <div className="grid-spacer--width"></div>
         {showButtons && (
           <div id="h-buttons">
             <div className="h-button--lg"></div>
-            <div className="h-button skeleton"></div>
-            <div className="h-button skeleton"></div>
-            <div className="h-button skeleton"></div>
+            <div className="h-button skeleton--white"></div>
+            <div className="h-button skeleton--white"></div>
+            <div className="h-button skeleton--white"></div>
           </div>
         )}
       </div>
       {showTabs && (
         <div id="header-row-2">
           <ul id="h-tabs">
-            <li className="h-tab skeleton"></li>
-            <li className="h-tab skeleton"></li>
-            <li className="h-tab skeleton"></li>
-            <li className="h-tab skeleton"></li>
-            <li className="h-tab skeleton"></li>
-            <li className="h-tab skeleton"></li>
-            <li className="h-tab skeleton"></li>
+            <li className="h-tab skeleton--white"></li>
+            <li className="h-tab skeleton--white"></li>
+            <li className="h-tab skeleton--white"></li>
+            <li className="h-tab skeleton--white"></li>
+            <li className="h-tab skeleton--white"></li>
+            <li className="h-tab skeleton--white"></li>
+            <li className="h-tab skeleton--white"></li>
           </ul>
         </div>
       )}

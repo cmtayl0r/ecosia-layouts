@@ -1,20 +1,13 @@
 /* 
 --------------------------------------------------------------------------------
-FOUNDATIONS
+FOUNDATION
 --------------------------------------------------------------------------------
 */
 
 body {
   font-family: var(--ff-plain);
   color: var(--clr-black);
-  /* 
-    To sort horizontal scroll bar issue 
-    when using full-with trick on image and callout
-    vw unit counts under the vertical scrollbar
-    */
   overflow-x: hidden;
-
-  /* Default background gradient if none defined */
   background-image: var(--gr-expresso);
 }
 
@@ -50,47 +43,51 @@ Stack mainline and sideline
 
 /* 
 --------------------------------------------------------------------------------
+WRAPPERS
+--------------------------------------------------------------------------------
+*/
+
+.section-wrapper {
+  &:nth-of-type(even) {
+    background-color: var(--bg-tr-black);
+  }
+  &:nth-of-type(odd) {
+    background-color: var(--bg-tr-blackest);
+  }
+}
+
+.wrapper--index {
+  padding: var(--sp-40) 0;
+}
+
+.wrapper--fixed {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.wrapper--full-width {
+  display: grid;
+  grid-template:
+    "left" auto
+    / auto;
+  min-height: 640px;
+}
+
+.wrapper--serp {
+  margin: 0px auto;
+  width: fit-content;
+}
+
+/* 
+--------------------------------------------------------------------------------
 SERP
 --------------------------------------------------------------------------------
 */
 
-.serp-container {
-  margin: 0px auto;
-  width: fit-content;
-  color: var(--clr-white);
-
-  & h5 {
-    margin: 0 0 var(--sp-base) 0;
-
-    & span {
-      font-weight: var(--fw-light);
-    }
-  }
-}
-.title-block {
-  padding: var(--sp-12);
-
-  & > :first-child {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: var(--fw-black);
-  }
-
-  & span {
-    font-weight: var(--fw-bold);
-  }
-}
-
-.serp-sub-container {
+.container--serp {
   display: grid;
   grid-template-columns: minmax(0, 654px);
   gap: var(--sp-base);
-}
-
-.skeleton,
-#mainline,
-#sideline {
-  background-color: var(--bg-tr-white);
 }
 
 #mainline > :last-child {
@@ -101,122 +98,23 @@ SERP
   padding: 0 var(--sp-base);
 }
 
-.serp-container,
-.skeleton--black {
-  background-color: var(--bg-tr-black);
-}
-
 /* 
 --------------------------------------------------------------------------------
-INDEX CURRENT
+INDEX
 --------------------------------------------------------------------------------
 */
 
-.index-wrapper {
-  &:nth-of-type(even) {
-    background-color: var(--bg-tr-black);
-  }
-  &:nth-of-type(odd) {
-    background-color: var(--bg-tr-blackest);
-  }
-}
-
-.wrapper--center {
-  padding: var(--sp-40) 0;
-}
-
-.wrapper--full {
-  display: grid;
-  grid-template:
-    "left" auto
-    / auto;
-  min-height: 640px;
-}
-
-.sub-container--left {
+/* Index/ecosia.org [Extension NOT installed ] */
+.container--left-full {
   grid-area: left;
-  background-color: var(--bg-tr-white);
   padding: 0 var(--sp-base);
 }
 
-.sub-container--right {
+.container--right-full {
   display: none;
-
-  & h4 {
-    margin: 0;
-    color: var(--clr-white);
-    text-transform: uppercase;
-    font-weight: var(--fw-black);
-  }
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-base);
-  max-width: 380px;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  height: 100%;
-  background-color: var(--bg-tr-whitest);
-
-  & h4 {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: var(--fw-black);
-  }
-}
-
-.counter {
-  height: 103px;
-  width: 100%;
-  background-color: var(--bg-tr-whitest);
-  border-radius: var(--br-lg);
-}
-
-.index-cur-container,
-.index-new-container {
-  /* Properties */
-  color: var(--clr-white);
-
-  & h5 {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: var(--fw-black);
-  }
-}
-
-.index-cur-container {
-  /* Flex */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  /* Properties */
-  max-width: 280px;
-  margin: 0 auto;
-  height: 100%;
-  background-color: var(--bg-tr-white);
-
-  /* padding: var(--sp-base); */
-}
-.index-sub-container {
-  /* Grid */
-  display: grid;
-  gap: var(--sp-24);
-  grid-template-columns: 1fr;
-
-  /* Properties */
-  color: var(--clr-black);
-
-  & > * {
-    padding: var(--sp-12);
-    background-color: var(--bg-tr-white);
-  }
-}
-
-.index-search-container {
+.container--index-search {
   /* Flex */
   display: flex;
   flex-direction: column;
@@ -230,26 +128,61 @@ INDEX CURRENT
   margin: 0 auto;
   height: 100%;
 }
+
+.container--index {
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Properties */
+  max-width: 280px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.container--index-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-base);
+  max-width: 380px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+}
+
+/* SUB CONTAINER  */
+
+/* FIXME: Make generic for a container (children) */
+.sub-container {
+  /* Grid */
+  display: grid;
+  gap: var(--sp-24);
+  grid-template-columns: 1fr;
+
+  & > * {
+    padding: var(--sp-12);
+    background-color: var(--bg-tr-white);
+  }
+}
+
+/* 
+--------------------------------------------------------------------------------
+INDEX / NTP SEARCH 
+--------------------------------------------------------------------------------
+*/
 .ntp-logo {
   height: 48px;
   width: 192px;
   background-image: url("/ecosia-logo--lg.png");
 }
+
 .ntp-search {
   height: 60px;
   width: 100%;
-
-  background-color: var(--bg-tr-white);
   border-radius: var(--br-xxl);
   border: 2px solid var(--bg-tr-whitest);
-}
-/* 
---------------------------------------------------------------------------------
-HERO SEARCH
---------------------------------------------------------------------------------
-*/
-
-.hero-search {
 }
 
 .ntp-sites {
@@ -257,10 +190,9 @@ HERO SEARCH
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--sp-32);
+  justify-content: center;
   list-style-type: none;
   padding: 0;
-
-  justify-content: center;
 }
 
 .ntp-top-site {
@@ -272,67 +204,6 @@ HERO SEARCH
 
 /* 
 --------------------------------------------------------------------------------
-BLOCKS
---------------------------------------------------------------------------------
-*/
-
-.block-result,
-.block-card {
-  padding: var(--sp-12);
-  background-color: var(--bg-tr-white);
-  margin-bottom: var(--sp-base);
-  color: var(--clr-black);
-
-  & > :first-child {
-    text-transform: uppercase;
-    font-weight: var(--fw-black);
-    font-size: var(--fs-sm);
-  }
-}
-
-.block-result {
-  /* --- */
-}
-
-.block-card {
-  border-radius: var(--br-lg);
-}
-
-/* 
---------------------------------------------------------------------------------
-GRID
---------------------------------------------------------------------------------
-*/
-
-.grid {
-  display: grid;
-  gap: var(--sp-base); /* Gutter space */
-  padding: var(--sp-base); /* Margin */
-  background-color: var(--bg-tr-white);
-}
-.grid-8 {
-  grid-template-columns: repeat(8, 1fr);
-}
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.column {
-  color: var(--clr-black);
-  background-color: var(--bg-tr-whitest);
-  padding-top: var(--sp-8);
-  text-align: center; /* Visual indicator of column borders */
-  border-radius: var(--br-sm);
-  height: 500px;
-}
-
-/* 
---------------------------------------------------------------------------------
 BREAKPOINTS
 --------------------------------------------------------------------------------
 */
@@ -340,34 +211,34 @@ BREAKPOINTS
 /* MOBILE */
 @media (min-width: 550px) {
   /* ... */
-  .serp-container {
+  .wrapper--serp {
     /*  */
   }
-  .index-cur-container {
+  .container--index {
     max-width: 400px;
   }
 }
 /* TABLET */
 @media (min-width: 768px) {
   /* ... */
-  .serp-container {
+  .wrapper--serp {
     /*  */
   }
-  .index-cur-container {
+  .container--index {
     max-width: 460px;
   }
-  .index-search-container {
+  .container--index-search {
     max-width: 620px;
   }
 }
 /* DESKTOP */
 @media (min-width: 1080px) {
   /* ... */
-  .serp-container {
+  .wrapper--serp {
     margin: auto;
     width: fit-content;
   }
-  .serp-sub-container {
+  .container--serp {
     grid-template-columns: 654px 360px;
     gap: 40px;
   }
@@ -375,32 +246,31 @@ BREAKPOINTS
     padding: 0;
   }
   /*  */
-  .index-cur-container {
+  .container--index {
     max-width: 992px;
   }
-  .index-search-container {
+  .container--index-search {
     max-width: 800px;
   }
 
-  .wrapper--full {
+  .wrapper--full-width {
     display: grid;
     grid-template-areas: "left right";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     min-height: 640px;
   }
-  .sub-container--right {
+  .container--right-full {
+    grid-area: right;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: right;
-    background-color: var(--bg-tr-black);
   }
-  .sub-container--left {
+  .container--left-full {
     padding: 0;
   }
 
-  .hero-content {
+  .container--index-hero {
     max-width: 380px;
   }
 
@@ -415,10 +285,10 @@ BREAKPOINTS
 /* DESKTOP L */
 @media (min-width: 1280px) {
   /* ... */
-  .serp-container {
+  .wrapper--serp {
     margin-left: 120px;
   }
-  .hero-content {
+  .container--index-hero {
     max-width: 485px;
   }
 }
@@ -426,14 +296,14 @@ BREAKPOINTS
 @media (min-width: 1440px) {
   /* ... */
 
-  .serp-container {
+  .wrapper--serp {
     margin-left: 180px;
   }
 }
 /* DESKTOP 2L */
 @media (min-width: 1920px) {
   /* ... */
-  .serp-container {
+  .wrapper--serp {
     margin-left: 240px;
   }
 }

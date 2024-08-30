@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Header from "../components/Header";
 import Info from "../components/Info";
+import BlockTitle from "../components/BlockTitle";
 
 function IndexOutContentPage({ breakpoint }) {
   const customStyles = {
@@ -25,10 +26,10 @@ function IndexOutContentPage({ breakpoint }) {
         customClasses={customClasses}
       />
 
-      <section className="index-wrapper wrapper--full">
-        <div className="sub-container--left">
-          <div className="hero-content">
-            <h4>The greenest way to search</h4>
+      <section className="section-wrapper wrapper--full-width">
+        <div className="container--left-full skeleton--white">
+          <div className="container--index-hero skeleton--whitest">
+            <h4 className="text--title">The greenest way to search</h4>
             <small>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nisi
               eos veniam maxime deserunt, veritatis officia tempore libero
@@ -38,17 +39,15 @@ function IndexOutContentPage({ breakpoint }) {
             {/* <div className="counter"></div> */}
           </div>
         </div>
-        <div className="sub-container--right">
-          <h4>Hero image</h4>
+        <div className="container--right-full skeleton--black">
+          <h4 className="text--title text--white">Hero image</h4>
         </div>
       </section>
       {/* SECTION 1 */}
-      <section className="index-wrapper wrapper--center">
-        <div className="index-cur-container">
-          <header className="title-block">
-            <h5>Container</h5>
-          </header>
-          <div className="index-sub-container col-1">
+      <section className="section-wrapper wrapper--index">
+        <div className="container--index skeleton--white">
+          <BlockTitle invertText={false} />
+          <div className="sub-container col-1">
             <div>
               <p>1 Col</p>
               <small>
@@ -62,12 +61,10 @@ function IndexOutContentPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper wrapper--center">
-        <div className="index-cur-container">
-          <header className="title-block">
-            <h5>Container</h5>
-          </header>
-          <div className="index-sub-container col-2">
+      <section className="section-wrapper wrapper--index">
+        <div className="container--index skeleton--white">
+          <BlockTitle invertText={false} />
+          <div className="sub-container col-2">
             <div>
               <p>2 Cols</p>
               <small>
@@ -90,12 +87,10 @@ function IndexOutContentPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper wrapper--center">
-        <div className="index-cur-container">
-          <header className="title-block">
-            <h5>Container</h5>
-          </header>
-          <div className="index-sub-container col-3">
+      <section className="section-wrapper wrapper--index">
+        <div className="container--index skeleton--white">
+          <BlockTitle invertText={false} />
+          <div className="sub-container col-3">
             <div>
               <p>3 Cols</p>
               <small>

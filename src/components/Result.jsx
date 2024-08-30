@@ -1,6 +1,6 @@
 function Result() {
   return (
-    <article className="block-result">
+    <article className="block--result">
       <p>Result</p>
       <small>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, eligendi

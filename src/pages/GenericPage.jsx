@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Header from "../components/Header";
 import Info from "../components/Info";
+import BlockTitle from "../components/BlockTitle";
 
 function GenericPage({ breakpoint }) {
   const customStyles = {
@@ -25,12 +26,10 @@ function GenericPage({ breakpoint }) {
       />
 
       {/* SECTION 1 */}
-      <section className="index-wrapper wrapper--center">
-        <div className="index-cur-container">
-          <header className="title-block">
-            <h5>Container</h5>
-          </header>
-          <div className="index-sub-container col-1">
+      <section className="section-wrapper wrapper--index">
+        <div className="container--index skeleton--white">
+          <BlockTitle invertText={false} />
+          <div className="sub-container col-1">
             <div>
               <p>1 Col</p>
               <small>
@@ -44,12 +43,10 @@ function GenericPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper wrapper--center">
-        <div className="index-cur-container">
-          <header className="title-block">
-            <h5>Container</h5>
-          </header>
-          <div className="index-sub-container col-2">
+      <section className="section-wrapper wrapper--index">
+        <div className="container--index skeleton--white">
+          <BlockTitle invertText={false} />
+          <div className="sub-container col-2">
             <div>
               <p>2 Cols</p>
               <small>
@@ -72,12 +69,10 @@ function GenericPage({ breakpoint }) {
         </div>
       </section>
       {/* SECTION 2 */}
-      <section className="index-wrapper wrapper--center">
-        <div className="index-cur-container">
-          <header className="title-block">
-            <h5>Container</h5>
-          </header>
-          <div className="index-sub-container col-3">
+      <section className="section-wrapper wrapper--index">
+        <div className="container--index skeleton--white">
+          <BlockTitle invertText={false} />
+          <div className="sub-container col-3">
             <div>
               <p>3 Cols</p>
               <small>

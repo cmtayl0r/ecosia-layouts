@@ -3,12 +3,12 @@ function Footer() {
     <footer id="footer">
       <div id="footer-row-1">
         <div id="footer-cards">
-          <div className="footer-card block-card">
+          <div className="footer-card block--card">
             <p>Card</p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
             alias expedita.
           </div>
-          <div className="footer-card block-card">
+          <div className="footer-card block--card">
             <p>Card</p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
             alias expedita.
