@@ -231,7 +231,7 @@ INDEX CURRENT
   width: 100%;
 
   background-color: var(--bg-tr-white);
-  border-radius: var(--br-lg);
+  border-radius: var(--br-xxl);
   border: 2px solid var(--bg-tr-whitest);
 }
 /* 
