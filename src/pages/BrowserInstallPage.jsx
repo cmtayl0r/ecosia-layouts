@@ -10,13 +10,14 @@ function BrowserInstallPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--search",
+    logo: "logo--browser",
   };
 
   return (
     <>
       <Info breakpoint={breakpoint} />
       <Header
-        showLogo={false}
+        showLogo={true}
         showSearch={false}
         showButtons={true}
         showTabs={false}

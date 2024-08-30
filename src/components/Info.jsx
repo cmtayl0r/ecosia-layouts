@@ -26,6 +26,9 @@ function Info({ breakpoint }) {
       case "/generic-page":
         setCurrentPage("Generic Page");
         break;
+      case "/headers":
+        setCurrentPage("Header variants");
+        break;
       // Add more cases for other routes as needed
       default:
         setCurrentPage("Unknown Page");
@@ -37,7 +40,7 @@ function Info({ breakpoint }) {
       <p>
         <span className="text-bold">{currentPage}</span> at {breakpoint}
       </p>
-      <small>Context on the page</small>
+      {/* <small>Context on the page</small> */}
     </div>
   );
 }

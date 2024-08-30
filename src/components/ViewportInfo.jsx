@@ -22,10 +22,13 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         setCurrentPage("SERP [Grid]");
         break;
       case "/browser-install":
-        setCurrentPage("Browser Install");
+        setCurrentPage("Browser install");
         break;
       case "/generic-page":
-        setCurrentPage("Generic Page");
+        setCurrentPage("Generic page");
+        break;
+      case "/headers":
+        setCurrentPage("Header variants");
         break;
       // Add more cases for other routes as needed
       default:
@@ -45,6 +48,15 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
   };
   const goToIndexOutContentPage = () => {
     navigate("/index-out-content");
+  };
+  const goToBrowserInstallPage = () => {
+    navigate("/browser-install");
+  };
+  const goToHeadersPage = () => {
+    navigate("/headers");
+  };
+  const goToGenericPage = () => {
+    navigate("/generic-page");
   };
   // const goToIndexGridPage = () => {
   //   navigate("/index-grid");
@@ -80,9 +92,20 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         <button className="btn" onClick={goToIndexOutContentPage}>
           Index 2
         </button>
+        <button className="btn" onClick={goToBrowserInstallPage}>
+          Browser
+        </button>
       </div>
       <hr />
-      <p>Generic [new i.e. Accounts]</p>
+      <p>Collections</p>
+      <div className="toast-buttons">
+        <button className="btn" onClick={goToGenericPage}>
+          Generic page
+        </button>
+        <button className="btn" onClick={goToHeadersPage}>
+          Headers
+        </button>
+      </div>
     </div>
   );
 }

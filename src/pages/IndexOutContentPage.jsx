@@ -10,6 +10,7 @@ function IndexOutContentPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--search",
+    logo: "logo--serp",
   };
 
   return (
@@ -37,7 +38,9 @@ function IndexOutContentPage({ breakpoint }) {
             {/* <div className="counter"></div> */}
           </div>
         </div>
-        <div className="sub-container--right">Right</div>
+        <div className="sub-container--right">
+          <h4>Hero image</h4>
+        </div>
       </section>
       {/* SECTION 1 */}
       <section className="index-wrapper wrapper--center">

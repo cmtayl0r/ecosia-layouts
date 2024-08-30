@@ -141,6 +141,13 @@ INDEX CURRENT
 
 .sub-container--right {
   display: none;
+
+  & h4 {
+    margin: 0;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: var(--fw-black);
+  }
 }
 
 .hero-content {
@@ -213,8 +220,10 @@ INDEX CURRENT
   /* Flex */
   display: flex;
   flex-direction: column;
-  gap: var(--sp-base);
+  gap: var(--sp-48);
   align-items: center;
+
+  padding: var(--sp-base);
 
   /* Properties */
   max-width: 380px;
@@ -241,6 +250,24 @@ HERO SEARCH
 */
 
 .hero-search {
+}
+
+.ntp-sites {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--sp-32);
+  list-style-type: none;
+  padding: 0;
+
+  justify-content: center;
+}
+
+.ntp-top-site {
+  height: 48px;
+  width: 48px;
+  background-color: var(--bg-tr-white);
+  border-radius: var(--br-xxl);
 }
 
 /* 
@@ -364,6 +391,8 @@ BREAKPOINTS
   }
   .sub-container--right {
     display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: right;
     background-color: var(--bg-tr-black);
   }

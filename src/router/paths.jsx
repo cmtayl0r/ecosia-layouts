@@ -7,7 +7,7 @@ const PATHS = {
   indexOutGrid: "/index-out-grid",
   browserInstall: "/browser-install",
   generic: "/generic-page",
-  headers: "/header",
+  headers: "/headers",
   notFound: "*",
 };
 

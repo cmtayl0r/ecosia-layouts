@@ -29,8 +29,19 @@ function IndexContentPage({ breakpoint }) {
         <div className="index-search-container">
           <div className="ntp-logo"></div>
           <div className="ntp-search"></div>
-          <div>Sites</div>
-          <div>Counter</div>
+          <ul className="ntp-sites">
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+            <li className="ntp-top-site"></li>
+          </ul>
         </div>
       </section>
 

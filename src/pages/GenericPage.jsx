@@ -10,12 +10,13 @@ function GenericPage({ breakpoint }) {
   };
   const customClasses = {
     header: "header--search",
+    logo: "logo--default",
   };
   return (
     <>
       <Info breakpoint={breakpoint} />
       <Header
-        showLogo={false}
+        showLogo={true}
         showSearch={false}
         showButtons={true}
         showTabs={false}

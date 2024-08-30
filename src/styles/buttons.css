@@ -4,7 +4,7 @@
   justify-content: center;
 
   padding: 0 1em; /* 16px, 0 because affects min-height */
-  min-height: 2.75rem;
+  min-height: 1rem;
 
   border: 3px solid var(--clr-black);
   border-radius: var(--br-xxl);

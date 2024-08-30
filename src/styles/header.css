@@ -55,7 +55,7 @@ HEADER
 
 /* 
 --------------------------------------------------------------------------------
-HEADER CONTENT
+LOGO
 --------------------------------------------------------------------------------
 */
 
@@ -64,14 +64,36 @@ HEADER CONTENT
 #h-logo {
   /* Position */
   grid-area: logo;
+}
+.logo--serp {
   justify-self: center;
   margin-right: 0;
-
+}
+.logo--browser,
+.logo--default {
+  /* Position */
+  justify-self: center;
+  margin-right: 0;
+}
+.logo--browser {
+  background-image: url("/ecosia-logo--browser.png");
   /* Properties */
+  height: 35px;
+  width: 70px;
+}
+.logo--default,
+.logo--serp {
+  /* Properties */
+  background-image: url("/ecosia-logo.png");
   height: 20px;
   width: 80px;
-  background-image: url("/ecosia-logo.png");
 }
+
+/* 
+--------------------------------------------------------------------------------
+HEADER CONTENT
+--------------------------------------------------------------------------------
+*/
 
 /*  Search input */
 
@@ -184,8 +206,11 @@ BREAKPOINTS
 
   /* ---- CONTENT ---- */
 
-  #h-logo {
-    /* margin-right: 26px; */
+  .logo--serp {
+    justify-self: start;
+  }
+  .logo--browser,
+  .logo--default {
     justify-self: start;
   }
   .h-button--lg {
@@ -237,7 +262,7 @@ BREAKPOINTS
   /* #h-logo {
     margin-right: 86px;
   } */
-  #h-logo {
+  .logo--serp {
     margin-right: 24px;
     justify-self: end;
   }
