@@ -25,7 +25,7 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         setCurrentPage("Browser install");
         break;
       case "/generic-page":
-        setCurrentPage("Generic page");
+        setCurrentPage("Grid guide");
         break;
       case "/headers":
         setCurrentPage("Header variants");
@@ -97,10 +97,10 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         </button>
       </div>
       <hr />
-      <p>Collections</p>
+      <p>New Grid System</p>
       <div className="toast-buttons">
         <button className="btn" onClick={goToGenericPage}>
-          Generic page
+          Grid guide
         </button>
         <button className="btn" onClick={goToHeadersPage}>
           Headers

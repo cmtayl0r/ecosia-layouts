@@ -316,6 +316,11 @@ BREAKPOINTS
 @media (min-width: 1440px) {
   /* ... */
 
+  .container--fixed {
+    max-width: 1400px;
+    margin: auto;
+  }
+
   .wrapper--serp {
     margin-left: 180px;
   }

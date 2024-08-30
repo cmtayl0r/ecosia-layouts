@@ -95,14 +95,14 @@ GRID
   display: grid;
   grid-template-columns: repeat(var(--columns-mobile-s), 1fr);
   gap: var(--sp-base); /* Gutter space */
-  padding: var(--sp-base); /* Margin */
+  padding: 0 var(--sp-base); /* Margin */
   background-color: var(--bg-tr-white);
 }
 .grid-item {
   display: flex;
   justify-content: center;
-  background-color: var(--bg-tr-whitest);
-  border-radius: var(--br-sm);
+  background-color: var(--bg-tr-rose);
+  /* border-radius: var(--br-sm); */
   min-height: 200px;
   padding-top: var(--sp-base);
   & span {
@@ -110,11 +110,11 @@ GRID
     justify-content: center;
     align-items: center;
     font-weight: var(--fw-black);
-    color: var(--clr-black);
+    color: var(--clr-white);
     text-transform: uppercase;
     width: 40px;
     height: 40px;
-    background-color: var(--bg-tr-black);
+    background-color: var(--bg-tr-blackest);
     border-radius: var(--br-xxl);
   }
 }

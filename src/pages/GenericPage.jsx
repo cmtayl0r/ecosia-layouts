@@ -32,16 +32,8 @@ function GenericPage({ breakpoint }) {
         <div className="container--fixed skeleton--white">
           <BlockTitle invertText={false} label="Fixed container" />
 
-          <div className="sub-container col-1">
-            <div>
-              <p>Responsive grid suggestion</p>
-              {/* <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-                earum commodi repellat mollitia impedit voluptate voluptatum
-                nisi esse, necessitatibus ipsum sit. Est tempora, maxime
-                architecto voluptate adipisci maiores nostrum sequi.
-              </small> */}
-            </div>
+          <div>
+            <p>Columns, gutters and margins</p>
           </div>
           <Grid
             columnsDesktopL={12}
@@ -72,6 +64,9 @@ function GenericPage({ breakpoint }) {
       <section className="section-wrapper">
         <div className="container--fluid skeleton--white">
           <BlockTitle invertText={false} label="Fluid container" />
+          <div>
+            <p>Columns, gutters and margins</p>
+          </div>
           <Grid
             columnsDesktopL={12}
             columnsDesktop={12}
