@@ -73,6 +73,7 @@ HEADER CONTENT
   height: 20px;
   width: 70px;
   border-radius: var(--br-sm);
+  background-color: var(--bg-tr-blackest);
 }
 
 /*  Search input */
@@ -103,12 +104,16 @@ HEADER CONTENT
   height: 40px;
   border-radius: var(--br-lg);
 }
+.h-button--lg {
+  display: none;
+}
 #h-buttons {
   /* Position */
   grid-area: buttons; /* Place in the buttons area */
   display: flex; /* Align buttons in a row */
   justify-content: end;
-  gap: 10px; /* Space between buttons */
+  gap: var(--sp-8); /* Space between buttons */
+  margin-left: var(--sp-8);
 }
 
 /* Tabs */
@@ -174,6 +179,13 @@ BREAKPOINTS
 
   #h-logo {
     margin-right: 26px;
+  }
+  .h-button--lg {
+    display: flex;
+    width: 260px;
+    height: 40px;
+    border-radius: var(--br-lg);
+    background-color: var(--bg-tr-black);
   }
   #h-search {
     margin-top: 0;

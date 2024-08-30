@@ -125,9 +125,9 @@ INDEX CURRENT
 
 .wrapper--full {
   display: grid;
-  grid-template-areas: "left";
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template:
+    "left" auto
+    / auto;
   min-height: 640px;
 }
 

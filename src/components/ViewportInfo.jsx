@@ -66,7 +66,7 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         </button>
       </div>
       <hr />
-      <p>Index</p>
+      <p>Index / Browser Install</p>
       <div className="toast-buttons">
         <button className="btn" onClick={goToIndexContentPage}>
           Index 1

@@ -18,7 +18,7 @@ footer {
   padding: var(--sp-base);
 
   width: 100%;
-  background-color: var(--bg-tr-black);
+  background-color: var(--bg-tr-whitest);
 }
 
 #footer-row-2 {

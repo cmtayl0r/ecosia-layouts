@@ -15,11 +15,12 @@ function Header({
       className={`${customClasses.header || ""}`}
     >
       <div id="header-row-1" className={`${customClasses.row || ""}`}>
-        {showLogo && <div id="h-logo" className="skeleton--black"></div>}
+        {showLogo && <div id="h-logo"></div>}
         {showSearch && <div id="h-search" className="skeleton"></div>}
         <div className="grid-spacer--width"></div>
         {showButtons && (
           <div id="h-buttons">
+            <div className="h-button--lg"></div>
             <div className="h-button skeleton"></div>
             <div className="h-button skeleton"></div>
             <div className="h-button skeleton"></div>
