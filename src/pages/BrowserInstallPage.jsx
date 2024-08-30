@@ -4,7 +4,7 @@ import React from "react";
 import Header from "../components/Header";
 import Info from "../components/Info";
 
-function IndexOutContentPage({ breakpoint }) {
+function BrowserInstallPage({ breakpoint }) {
   const customStyles = {
     // header: { backgroundColor: "#782" },
   };
@@ -16,29 +16,14 @@ function IndexOutContentPage({ breakpoint }) {
     <>
       <Info breakpoint={breakpoint} />
       <Header
-        showLogo={true}
-        showSearch={true}
+        showLogo={false}
+        showSearch={false}
         showButtons={true}
         showTabs={false}
         customStyles={customStyles}
         customClasses={customClasses}
       />
 
-      <section className="index-wrapper wrapper--full">
-        <div className="sub-container--left">
-          <div className="hero-content">
-            <h4>The greenest way to search</h4>
-            <small>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nisi
-              eos veniam maxime deserunt, veritatis officia tempore libero
-              molestias, adipisci fugit voluptate nulla corrupti tenetur esse
-              ratione eum sint quaerat.
-            </small>
-            {/* <div className="counter"></div> */}
-          </div>
-        </div>
-        <div className="sub-container--right">Right</div>
-      </section>
       {/* SECTION 1 */}
       <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
@@ -127,4 +112,4 @@ function IndexOutContentPage({ breakpoint }) {
   );
 }
 
-export default IndexOutContentPage;
+export default BrowserInstallPage;

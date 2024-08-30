@@ -5,6 +5,9 @@ const PATHS = {
   indexGrid: "/index-grid",
   indexOutContent: "/index-out-content",
   indexOutGrid: "/index-out-grid",
+  browserInstall: "/browser-install",
+  generic: "/generic-page",
+  headers: "/header",
   notFound: "*",
 };
 

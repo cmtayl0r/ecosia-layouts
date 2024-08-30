@@ -17,6 +17,9 @@ import SerpGridPage from "../pages/SerpGridPage";
 import SerpContentPage from "../pages/SerpContentPage";
 import IndexContentPage from "../pages/IndexContentPage";
 import IndexOutContentPage from "../pages/IndexOutContentPage";
+import BrowserInstallPage from "../pages/BrowserInstallPage";
+import GenericPage from "../pages/GenericPage";
+import HeadersPage from "../pages/HeadersPage";
 
 function AppRoutes({ breakpoint }) {
   return (
@@ -36,6 +39,18 @@ function AppRoutes({ breakpoint }) {
       <Route
         path={PATHS.indexOutContent}
         element={<IndexOutContentPage breakpoint={breakpoint} />}
+      />
+      <Route
+        path={PATHS.browserInstall}
+        element={<BrowserInstallPage breakpoint={breakpoint} />}
+      />
+      <Route
+        path={PATHS.generic}
+        element={<GenericPage breakpoint={breakpoint} />}
+      />
+      <Route
+        path={PATHS.headers}
+        element={<HeadersPage breakpoint={breakpoint} />}
       />
     </Routes>
   );

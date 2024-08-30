@@ -21,6 +21,12 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
       case "/serp-grid":
         setCurrentPage("SERP [Grid]");
         break;
+      case "/browser-install":
+        setCurrentPage("Browser Install");
+        break;
+      case "/generic-page":
+        setCurrentPage("Generic Page");
+        break;
       // Add more cases for other routes as needed
       default:
         setCurrentPage("Unknown Page");
