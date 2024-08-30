@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer id="footer">
-      <div id="footer-row-1">
+      <div id="footer-row-1" className="skeleton--whitest">
         <div id="footer-cards">
           <div className="footer-card block--card">
             <p>Card</p>
@@ -15,7 +15,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div id="footer-row-2">
+      <div id="footer-row-2" className="skeleton--blackest">
         <ul id="footer-links">
           <li className="footer-link"></li>
           <li className="footer-link"></li>
