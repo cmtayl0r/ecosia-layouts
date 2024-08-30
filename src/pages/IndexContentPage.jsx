@@ -26,6 +26,16 @@ function IndexContentPage({ breakpoint }) {
 
       {/* SECTION 1 */}
       <section className="index-wrapper wrapper--center">
+        <div className="index-search-container">
+          <div className="ntp-logo"></div>
+          <div className="ntp-search"></div>
+          <div>Sites</div>
+          <div>Counter</div>
+        </div>
+      </section>
+
+      {/* SECTION 1 */}
+      <section className="index-wrapper wrapper--center">
         <div className="index-cur-container">
           <header className="title-block">
             <h5>Container</h5>
