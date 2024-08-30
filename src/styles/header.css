@@ -1,3 +1,7 @@
+:root {
+  --h-logo-col-width: 94px;
+}
+
 /* 
 --------------------------------------------------------------------------------
 HEADER
@@ -10,16 +14,10 @@ HEADER
   background-color: var(--bg-tr-white);
 }
 
-#headerTest {
-  display: grid;
-  background-color: var(--bg-tr-white);
-}
-
 /* Header variants paddings */
 .header--serp {
   padding: var(--sp-base) var(--sp-base) 0 var(--sp-base);
 }
-
 .header--search,
 .header--simple {
   padding: var(--sp-base);
@@ -69,7 +67,7 @@ HEADER CONTENT
   justify-self: center;
   margin-right: 0;
 
-  /* Style */
+  /* Properties */
   height: 20px;
   width: 70px;
   border-radius: var(--br-sm);
@@ -81,12 +79,12 @@ HEADER CONTENT
 #h-search {
   /* Position */
   grid-area: search;
-  max-width: none;
+  margin-top: var(--sp-base);
 
   /* Properties */
+  max-width: none;
   height: 40px;
   width: 100%;
-  margin-top: var(--sp-base);
   border-radius: var(--br-lg);
   border: 2px solid var(--bg-tr-whitest);
 }
@@ -142,16 +140,23 @@ BREAKPOINTS
 --------------------------------------------------------------------------------
 */
 
-/* MOBILE */
+/* ------------------------------------- MOBILE */
+
 @media (min-width: 550px) {
   /* ... */
 }
-/* TABLET */
+
+/* ------------------------------------- TABLET */
+
 @media (min-width: 768px) {
   /* ... */
 }
-/* DESKTOP */
+
+/* ------------------------------------- DESKTOP */
+
 @media (min-width: 1080px) {
+  /* ---- LAYOUT ---- */
+
   /* Header variants paddings */
   .header--serp {
     padding: var(--sp-base) var(--sp-24) 0 var(--sp-24);
@@ -166,7 +171,7 @@ BREAKPOINTS
   .header--serp div#header-row-1 {
     display: grid;
     grid-template-areas: "logo search spacer buttons";
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: var(--h-logo-col-width) 1fr auto auto;
     grid-template-rows: auto;
     align-items: center;
   }
@@ -178,8 +183,11 @@ BREAKPOINTS
     align-items: center;
   }
 
+  /* ---- CONTENT ---- */
+
   #h-logo {
-    margin-right: 26px;
+    /* margin-right: 26px; */
+    justify-self: start;
   }
   .h-button--lg {
     display: flex;
@@ -197,27 +205,61 @@ BREAKPOINTS
     /* margin-left: 96px; */
   }
 }
-/* DESKTOP L */
+
+/* ------------------------------------- DESKTOP L */
+
 @media (min-width: 1280px) {
+  /* ---- LAYOUT ---- */
+
+  .header--search div#header-row-1,
+  .header--serp div#header-row-1 {
+    grid-template-columns: var(--h-logo-col-width) 1fr auto auto;
+  }
+
+  /* ---- CONTENT ---- */
+
   #h-tabs {
     /* margin-left: 96px; */
   }
 }
-/* DESKTOP 1L */
+
+/* ------------------------------------- DESKTOP 1L */
+
 @media (min-width: 1440px) {
-  /* ... */
-  #h-logo {
-    margin-right: 86px;
+  /* ---- LAYOUT ---- */
+
+  .header--search div#header-row-1,
+  .header--serp div#header-row-1 {
+    grid-template-columns: 156px 1fr auto auto;
   }
+
+  /* ---- CONTENT ---- */
+
+  /* #h-logo {
+    margin-right: 86px;
+  } */
   #h-tabs {
     margin-left: 156px;
   }
 }
-/* DESKTOP 2L */
+
+/* ------------------------------------- DESKTOP 2L */
+
 @media (min-width: 1920px) {
   /* ... */
+
+  /* ---- LAYOUT ---- */
+
+  .header--search div#header-row-1,
+  .header--serp div#header-row-1 {
+    grid-template-columns: 216px 1fr auto auto;
+  }
+
+  /* ---- CONTENT ---- */
+
   #h-logo {
-    margin-right: 146px;
+    margin-right: 24px;
+    justify-self: end;
   }
   #h-tabs {
     margin-left: 216px;
