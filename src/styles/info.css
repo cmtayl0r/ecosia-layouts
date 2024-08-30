@@ -3,14 +3,35 @@
   flex-direction: column;
   padding: var(--sp-base);
 
-  background-size: 10px 10px;
+  /* background-size: 10px 10px;
   background-image: repeating-linear-gradient(
     45deg,
     #f3e24d 0,
     #f3e24d 4px,
     yellow 0,
     yellow 50%
-  );
+  ); */
+
+  background-color: #fff500;
+  opacity: 1;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #f9e906 25%,
+      transparent 25%,
+      transparent 75%,
+      #f9e906 75%,
+      #f9e906
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #f9e906 25%,
+      #fff500 25%,
+      #fff500 75%,
+      #f9e906 75%,
+      #f9e906
+    );
+  background-position: 0 0, 14px 14px;
+  background-size: 28px 28px;
 
   & h5 {
     margin: 0;
