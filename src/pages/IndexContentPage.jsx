@@ -16,7 +16,7 @@ function IndexContentPage({ breakpoint }) {
     <>
       <Info breakpoint={breakpoint} />
       <Header
-        showLogo={true}
+        showLogo={false}
         showSearch={false}
         showButtons={true}
         showTabs={false}
