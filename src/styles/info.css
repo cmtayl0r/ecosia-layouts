@@ -33,7 +33,7 @@
   background-position: 0 0, 14px 14px;
   background-size: 28px 28px;
 
-  & h5 {
+  & p span {
     margin: 0;
     text-transform: uppercase;
     font-weight: var(--fw-black);
