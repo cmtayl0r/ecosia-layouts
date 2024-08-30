@@ -1,3 +1,10 @@
+:root {
+  --columns-mobile-s: 1;
+  --columns-mobile: 2;
+  --columns-tablet: 6;
+  --columns-desktop: 12;
+  --columns-desktop-l: 12;
+}
 /* 
 --------------------------------------------------------------------------------
 WIREFRAME UTILITIES
@@ -31,6 +38,12 @@ WIREFRAME UTILITIES
   font-weight: var(--fw-black);
   margin: 0;
 }
+
+/* 
+--------------------------------------------------------------------------------
+BLOCKS
+--------------------------------------------------------------------------------
+*/
 
 /* 
 --------------------------------------------------------------------------------
@@ -78,29 +91,62 @@ GRID
 --------------------------------------------------------------------------------
 */
 
-.grid {
+.responsive-grid {
   display: grid;
+  grid-template-columns: repeat(var(--columns-mobile-s), 1fr);
   gap: var(--sp-base); /* Gutter space */
   padding: var(--sp-base); /* Margin */
   background-color: var(--bg-tr-white);
 }
-.grid-8 {
-  grid-template-columns: repeat(8, 1fr);
-}
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.column {
-  color: var(--clr-black);
+.grid-item {
+  display: flex;
+  justify-content: center;
   background-color: var(--bg-tr-whitest);
-  padding-top: var(--sp-8);
-  text-align: center; /* Visual indicator of column borders */
   border-radius: var(--br-sm);
-  height: 500px;
+  min-height: 200px;
+  padding-top: var(--sp-base);
+  & span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: var(--fw-black);
+    color: var(--clr-black);
+    text-transform: uppercase;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-tr-black);
+    border-radius: var(--br-xxl);
+  }
+}
+
+/* MOBILE */
+@media (min-width: 550px) {
+  .responsive-grid {
+    grid-template-columns: repeat(var(--columns-mobile), 1fr);
+  }
+  /* ... */
+}
+/* TABLET */
+@media (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(var(--columns-tablet), 1fr);
+  }
+}
+/* DESKTOP */
+@media (min-width: 1080px) {
+  .responsive-grid {
+    grid-template-columns: repeat(var(--columns-desktop), 1fr);
+  }
+}
+/* DESKTOP L */
+@media (min-width: 1280px) {
+  /* ... */
+}
+/* DESKTOP 1L */
+@media (min-width: 1440px) {
+  /* ... */
+}
+/* DESKTOP 2L */
+@media (min-width: 1920px) {
+  /* ... */
 }

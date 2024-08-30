@@ -32,18 +32,19 @@ function App() {
 
   // Function to determine breakpoint based on width
   function getBreakpoint(width) {
-    if (width <= 550) return "Mobile";
-    if (width > 550 && width <= 1080) return "Tablet";
-    if (width > 1080 && width <= 1280) return "Desktop";
-    if (width > 1280 && width <= 1440) return "Desktop-L";
-    if (width > 1440 && width <= 1920) return "Desktop-1L";
-    return "Desktop-2L";
+    if (width < 400) return "Below Mobile"; // Below the smallest defined breakpoint
+    if (width >= 400 && width < 550) return "Mobile";
+    if (width >= 550 && width < 768) return "Mobile-L";
+    if (width >= 768 && width < 1080) return "Tablet";
+    if (width >= 1080 && width < 1280) return "Desktop";
+    if (width >= 1280 && width < 1440) return "Desktop-L";
+    if (width >= 1440 && width < 1920) return "Desktop-1L";
+    return "Desktop-2L"; // width >= 1920
   }
 
   return (
     <>
       <AppRoutes breakpoint={breakpoint} />
-      <Footer />
       <ViewportInfo viewportWidth={viewportWidth} breakpoint={breakpoint} />
     </>
   );

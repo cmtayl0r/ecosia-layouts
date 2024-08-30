@@ -19,7 +19,7 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
         setCurrentPage("Index 2");
         break;
       case "/serp-grid":
-        setCurrentPage("SERP [Grid]");
+        setCurrentPage("SERP + Grid");
         break;
       case "/browser-install":
         setCurrentPage("Browser install");
@@ -80,7 +80,7 @@ function ViewportInfo({ viewportWidth, breakpoint }) {
           SERP
         </button>
         <button className="btn" onClick={goToSerpGridPage}>
-          SERP [Grid]
+          SERP + Grid
         </button>
       </div>
       <hr />

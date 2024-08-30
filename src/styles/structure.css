@@ -95,7 +95,7 @@ SERP
 }
 
 #sideline {
-  padding: 0 var(--sp-base);
+  /* padding: 0 var(--sp-base); */
 }
 
 /* 
@@ -201,6 +201,21 @@ INDEX / NTP
 
 /* 
 --------------------------------------------------------------------------------
+DEFAULT
+--------------------------------------------------------------------------------
+*/
+
+.container--fixed {
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Properties */
+}
+
+/* 
+--------------------------------------------------------------------------------
 BREAKPOINTS
 --------------------------------------------------------------------------------
 */
@@ -230,6 +245,10 @@ BREAKPOINTS
 }
 /* DESKTOP */
 @media (min-width: 1080px) {
+  .container--fixed {
+    max-width: 992px;
+    margin: auto;
+  }
   /* ... */
   .wrapper--serp {
     margin: auto;
@@ -281,6 +300,10 @@ BREAKPOINTS
 }
 /* DESKTOP L */
 @media (min-width: 1280px) {
+  .container--fixed {
+    max-width: 1200px;
+    margin: auto;
+  }
   /* ... */
   .wrapper--serp {
     margin-left: 120px;

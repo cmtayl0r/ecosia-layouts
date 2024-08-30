@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Result from "../components/Result";
 import Card from "../components/Card";
 import Info from "../components/Info";
@@ -52,6 +53,7 @@ function SerpContentPage({ breakpoint }) {
           </aside>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

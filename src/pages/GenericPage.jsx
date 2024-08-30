@@ -2,8 +2,10 @@ import React from "react";
 
 // Components
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Info from "../components/Info";
 import BlockTitle from "../components/BlockTitle";
+import Grid from "../components/Grid";
 
 function GenericPage({ breakpoint }) {
   const customStyles = {
@@ -26,83 +28,69 @@ function GenericPage({ breakpoint }) {
       />
 
       {/* SECTION 1 */}
-      <section className="section-wrapper wrapper--index">
-        <div className="container--index skeleton--white">
-          <BlockTitle invertText={false} />
+      <section className="section-wrapper">
+        <div className="container--fixed skeleton--white">
+          <BlockTitle invertText={false} label="Fixed container" />
+
           <div className="sub-container col-1">
             <div>
-              <p>1 Col</p>
-              <small>
+              <p>Responsive grid suggestion</p>
+              {/* <small>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
                 earum commodi repellat mollitia impedit voluptate voluptatum
                 nisi esse, necessitatibus ipsum sit. Est tempora, maxime
                 architecto voluptate adipisci maiores nostrum sequi.
-              </small>
+              </small> */}
             </div>
+          </div>
+          <Grid
+            columnsDesktopL={12}
+            columnsDesktop={12}
+            columnsTablet={6}
+            columnsMobile={2}
+            columnsMobileS={1}
+          >
+            {/* Example grid items */}
+            {[...Array(12)].map((_, index) => (
+              <div key={index} className="grid-item">
+                <span>{index + 1}</span>
+              </div>
+            ))}
+          </Grid>
+
+          <div>
+            <ul>
+              <li>Hero - Fixed / Centred</li>
+              <li>Hero - Fluid / 50-50</li>
+            </ul>
           </div>
         </div>
       </section>
+
       {/* SECTION 2 */}
-      <section className="section-wrapper wrapper--index">
-        <div className="container--index skeleton--white">
-          <BlockTitle invertText={false} />
-          <div className="sub-container col-2">
-            <div>
-              <p>2 Cols</p>
-              <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-                earum commodi repellat mollitia impedit voluptate voluptatum
-                nisi esse, necessitatibus ipsum sit. Est tempora, maxime
-                architecto voluptate adipisci maiores nostrum sequi.
-              </small>
-            </div>
-            <div>
-              <p>2 Cols</p>
-              <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-                earum commodi repellat mollitia impedit voluptate voluptatum
-                nisi esse, necessitatibus ipsum sit. Est tempora, maxime
-                architecto voluptate adipisci maiores nostrum sequi.
-              </small>
-            </div>
-          </div>
+
+      <section className="section-wrapper">
+        <div className="container--fluid skeleton--white">
+          <BlockTitle invertText={false} label="Fluid container" />
+          <Grid
+            columnsDesktopL={12}
+            columnsDesktop={12}
+            columnsTablet={6}
+            columnsMobile={2}
+            columnsMobileS={1}
+          >
+            {/* Example grid items */}
+            {[...Array(12)].map((_, index) => (
+              <div key={index} className="grid-item">
+                <span>{index + 1}</span>
+              </div>
+            ))}
+          </Grid>
         </div>
       </section>
-      {/* SECTION 2 */}
-      <section className="section-wrapper wrapper--index">
-        <div className="container--index skeleton--white">
-          <BlockTitle invertText={false} />
-          <div className="sub-container col-3">
-            <div>
-              <p>3 Cols</p>
-              <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-                earum commodi repellat mollitia impedit voluptate voluptatum
-                nisi esse, necessitatibus ipsum sit. Est tempora, maxime
-                architecto voluptate adipisci maiores nostrum sequi.
-              </small>
-            </div>
-            <div>
-              <p>3 Cols</p>
-              <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-                earum commodi repellat mollitia impedit voluptate voluptatum
-                nisi esse, necessitatibus ipsum sit. Est tempora, maxime
-                architecto voluptate adipisci maiores nostrum sequi.
-              </small>
-            </div>
-            <div>
-              <p>3 Cols</p>
-              <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-                earum commodi repellat mollitia impedit voluptate voluptatum
-                nisi esse, necessitatibus ipsum sit. Est tempora, maxime
-                architecto voluptate adipisci maiores nostrum sequi.
-              </small>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

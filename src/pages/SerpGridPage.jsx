@@ -4,6 +4,8 @@ import React from "react";
 import Header from "../components/Header";
 import Info from "../components/Info";
 import BlockTitle from "../components/BlockTitle";
+import Footer from "../components/Footer";
+import Grid from "../components/Grid";
 
 function SerpGridPage({ breakpoint }) {
   const customStyles = {
@@ -31,28 +33,41 @@ function SerpGridPage({ breakpoint }) {
           <main id="mainline" className="skeleton--white">
             <BlockTitle invertText={true} label="Mainline" />
 
-            <div class="grid grid-8">
-              <div class="column">1</div>
-              <div class="column">2</div>
-              <div class="column">3</div>
-              <div class="column">4</div>
-              <div class="column">5</div>
-              <div class="column">6</div>
-              <div class="column">7</div>
-              <div class="column">8</div>
-            </div>
+            <Grid
+              columnsDesktopL={8}
+              columnsDesktop={8}
+              columnsTablet={6}
+              columnsMobile={2}
+              columnsMobileS={1}
+            >
+              {/* Example grid items */}
+              {[...Array(8)].map((_, index) => (
+                <div key={index} className="grid-item">
+                  <span>{index + 1}</span>
+                </div>
+              ))}
+            </Grid>
           </main>
           <aside id="sideline" className="skeleton--white">
             <BlockTitle invertText={true} label="Sideline" />
-            <div class="grid grid-4">
-              <div class="column">1</div>
-              <div class="column">2</div>
-              <div class="column">3</div>
-              <div class="column">4</div>
-            </div>
+            <Grid
+              columnsDesktopL={4}
+              columnsDesktop={4}
+              columnsTablet={4}
+              columnsMobile={2}
+              columnsMobileS={1}
+            >
+              {/* Example grid items */}
+              {[...Array(4)].map((_, index) => (
+                <div key={index} className="grid-item">
+                  <span>{index + 1}</span>
+                </div>
+              ))}
+            </Grid>
           </aside>
         </div>{" "}
       </div>
+      <Footer />
     </>
   );
 }
